@@ -1,6 +1,5 @@
-@@ -1,128 +1,50 @@
 # SAGS-REACT - Sistema Avanzado de Gestión de Software  
-# React + TypeScript + Vite
+## React + TypeScript + Vite
 
 ### Descripción  
 SAGS es una herramienta diseñada para optimizar las etapas de planificación y análisis en el ciclo de vida del software. Ahora, con la implementación de **React con TypeScript** para el frontend, se ha mejorado la experiencia de usuario, haciéndola más robusta, segura y eficiente. SAGS facilita la colaboración entre usuarios y terceros en la generación de documentación, permitiendo a los desarrolladores centrarse en el diseño y programación del software, basándose en documentación clara y estructurada generada con el sistema.  
