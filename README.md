@@ -2,17 +2,15 @@
 ## React + TypeScript + Vite
 
 ### Descripción  
-SAGS es una herramienta diseñada para optimizar las etapas de planificación y análisis en el ciclo de vida del software. Ahora, con la implementación de **React con TypeScript** para el frontend, se ha mejorado la experiencia de usuario, haciéndola más robusta, segura y eficiente. SAGS facilita la colaboración entre usuarios y terceros en la generación de documentación, permitiendo a los desarrolladores centrarse en el diseño y programación del software, basándose en documentación clara y estructurada generada con el sistema.  
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SAGS es una herramienta diseñada para optimizar las etapas de planificación y análisis en el ciclo de vida del software. Ahora, con la implementación de **React con TypeScript** para el frontend, se ha mejorado la experiencia de usuario, haciéndola más robusta, segura, eficiente y con una mejor interacción. SAGS facilita la colaboración entre usuarios y terceros en la generación de documentación, permitiendo a los desarrolladores centrarse en las siguientes etapas del ciclo de vida de su software, basándose en documentación clara y estructurada generada con el sistema.  
 
 ## Características principales  
-- **Automatización del proceso de documentación:** Facilita la creación y estructuración de documentos clave en las primeras fases del desarrollo de software.  
+- **Automatización del proceso de documentación:** Facilita la creación y estructuración de documentos clave en las primeras fases del desarrollo de software (Análisis y Planificación).  
 - **Colaboración efectiva:** Mejora la cooperación entre distintos roles en el proyecto, optimizando el flujo de trabajo.  
-- **Soporte para múltiples diagramas:** Incluye plantillas y diagramas basados en la norma IEEE-830, como casos de uso, modelo de clases, entidad-relación, entre otros.  
+- **Soporte para múltiples diagramas:** Creación de diagramas basados en la norma IEEE-830, como casos de uso, modelo de clases, entidad-relación, entre otros.  
 - **Planes personalizables:** Los usuarios pueden elegir entre planes predefinidos o personalizar su plan seleccionando las características que mejor se ajusten a sus necesidades.  
 - **Interfaz moderna y tipada:** Con React y TypeScript, el sistema ofrece una experiencia de usuario dinámica, segura y rápida.  
-- **Gestión de roles y permisos:** Garantiza la seguridad y control de acceso en las diferentes partes del sistema.  
-Currently, two official plugins are available:
+- **Gestión de roles y permisos:** Garantiza la seguridad y control de acceso en los diferentes apartados del sistema.  
 
 ## Tecnologías utilizadas  
 ### Frontend  
@@ -25,16 +23,14 @@ Currently, two official plugins are available:
 ### Backend  
 - **Python con Flask:** Para manejar las peticiones del servidor.  
 - **Flask-RESTful:** Construcción de una API robusta para conectar el frontend con el backend.  
-## Expanding the ESLint configuration
 
 ### Base de Datos  
 - **MySQL:** Para almacenar la información de usuarios, proyectos y planes de forma estructurada.  
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
 ### Seguridad  
 - **JWT (JSON Web Tokens):** Para la autenticación y autorización segura de usuarios.  
-- **Gestión de roles:** Control de permisos basado en roles (administrador, desarrollador, cliente, etc.).  
-- Configure the top-level `parserOptions` property like this:
+- **Gestión de roles:** Control de permisos basado en roles (administrador, desarrollador, cliente, etc.).
+- **AES Encrypt:** Para la seguridad de las cuentas de los usuarios.
 
 ### Compatibilidad  
 - **API REST:** Garantiza una comunicación eficiente entre el frontend y el backend.  
