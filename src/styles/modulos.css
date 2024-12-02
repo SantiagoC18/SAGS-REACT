@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    align-items: center;
+}
+
+.container-cards {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 720px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-cards{
+        flex-direction: column;
+    }
+
+    .svg {
+        visibility: hidden;
+        position: fixed;
+    }
+}
+
+.rounded-lg{
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+
+a .button_view{
+    width: 100%;
+}
+
+.py-10{
+    margin-top: 70px;
+}

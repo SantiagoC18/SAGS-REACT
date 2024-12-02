@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Proyectos</title>
+    <link rel="shortcut icon" href="/static/img/sirs.jpg" />
+    <script src="https://kit.fontawesome.com/25eed41d7b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.5/css/dataTables.tailwindcss.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="/src/styles/gestor_proyectos.css" />
+    <link rel="stylesheet" href="/src/styles/estilos.css" />
+</head>
+
+<body>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.3.8/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/oP1Rx8Le7K9noHAa/scene.splinecode"></spline-viewer>
+
+    <header>
+        <a href="{{ url_for('index') }}" class="logo"><img src="/static/img/sirs.jpg" width="60px" /></a>
+
+        <ul class="navbar">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('sobre_nosotros') }}">Sobre Nosotros</a></li>
+            <li><a href="{{ url_for('modulos') }}" class="active">Gestion de Proyectos</a></li>
+            <li><a href="{{ url_for('opiniones') }}">Opiniones</a></li>
+            <li><a href="{{ url_for('perfil') }}">Perfil</a></li>
+        </ul>
+
+        <div class="main">
+            <a href="{{ url_for('logout') }}" class="user"><i class="fa-solid fa-user"></i>{% if log %} {{log}} Sesion
+                {% endif
+                %}</a>
+            <div class="bx bx-menu" id="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="container_buttons">
+        <div class="inline-flex">
+            <button id="developerBtn"
+                class="bg-[#058fe9] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-la select">
+                Vista Desarrollador
+            </button>
+            <button id="adminBtn" class="bg-[#058fe9] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r">
+                Vista Administrador
+            </button>
+        </div>
+    </section>
+
+
+    <section id="developerView" class="active animate__animated animate__fadeInUpBig">
+
+        <center>
+            <div class="container m-8" style="max-width: 90vw">
+                <table id="myTable" class="display bg-[#000] w-max">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre del Proyecto</th>
+                            <th>Fecha de Inicio</th>
+                            <th>Fecha de Finalizacion</th>
+                            <th>Progreso</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for data2 in data2 %}
+                        <tr class="info">
+                            <td>{{ data2['idproy'] }}</td>
+                            <td>{{ data2['nombre'] }}</td>
+                            <td>{{ data2['fechaI'] }}</td>
+                            <td>{{ data2['FechaF'] }}</td>
+                            <td>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-blue-700 dark:text-white">{{ data2['progreso']
+                                        }}%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 10%"></div>
+                                </div>
+                            </td>
+                            <td>
+                                <button
+                                    class="bg-[#058fe9] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                                    Trabajar
+                                </button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </center>
+
+    </section>
+
+
+    <section id="adminView" class="view-section animate__animated animate__fadeInUpBig">
+
+        <center>
+            <div class="container m-8" style="max-width: 90vw">
+                <table id="myTable2" class="display bg-[#090c14] ">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre del Proyecto</th>
+                            <th>Plan</th>
+                            <th>Scrum Master</th>
+                            <th>Asignar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for data in data %}
+                        <tr class="info">
+                            <td>{{ data['idproy'] }}</td>
+                            <td>{{ data['nombre'] }}</td>
+                            <td>{{ data2['nomplan'] }}</td>
+                            <td>
+                                <div class="progress"><span style="width: 50%"></span></div>
+                            </td>
+                            <td><button>Asignar</button></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </center>
+
+    </section>
+
+    <!--Enalaces de scripts-->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script src="https://cdn.datatables.net/2.1.5/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.1.5/js/dataTables.tailwindcss.js"></script>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script src="/static/js/bar.js"></script>
+    <script src="/static/js/dataTable.js"></script>
+    <script src="/static/js/gestor_proyectos.js"></script>
+</body>
+
+</html>
