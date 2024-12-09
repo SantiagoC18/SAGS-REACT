@@ -11,11 +11,6 @@
   font-style: normal;
 }
 
-*::selection {
-  background: rgb(0, 0, 0, 0.5);
-  color: aqua;
-}
-
 spline-viewer {
   position: fixed;
   top: 0;
@@ -185,8 +180,6 @@ header{
 }
 
 
-
-/*ventana emergente*/
 .contenedor {
   width: 90%;
   max-width: 1000px;
@@ -226,9 +219,7 @@ header{
   background: #0684d5;
 }
 
-/* ------------------------- */
 /* POPUP */
-/* ------------------------- */
 
 .overlay {
   background: rgba(0, 0, 0, .3);
@@ -339,9 +330,6 @@ header{
   background: rgba(94, 125, 227, .9);
 }
 
-/* ------------------------- */
-/* ANIMACIONES */
-/* ------------------------- */
 .popup.active {
   transform: scale(1);
   opacity: 1;

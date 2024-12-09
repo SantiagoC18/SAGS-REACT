@@ -1,20 +1,15 @@
-import { Link } from 'react-router-dom';
-import swal from 'sweetalert2';
-import '/App.jsx';
+import { Link } from "react-router-dom";
+import swal from "sweetalert2";
+import React, { useState, useEffect } from "react";
 
-const header = ({ log, hola }) => {
+const Header = ({ log, hola }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  // Manejo del clic en el ícono de menú para dispositivos móviles
-  const handleMenuClick = () => {
-    setMenuOpen(!menuOpen);
-  };
 
   useEffect(() => {
     if (hola) {
       swal.fire({
         title: "ACCESO CONCEDIDO",
-        text: `Hola ${hola} bienvenido a (SAGS)`,
+        text: `Hola ${hola}, bienvenido a (SAGS)`,
         icon: "success",
         timer: 2000,
         showConfirmButton: false,
@@ -27,21 +22,29 @@ const header = ({ log, hola }) => {
 
   return (
     <header className="navbar-container">
-
       <Link to="/" className="logo">
         <img src="src/assets/img/sirs.jpg" width="60px" alt="Logo" />
       </Link>
 
-      <nav>
-        <ul className={`navbar ${menuOpen ? 'open' : ''}`}>
-          <li>Home</li>
-          <li>Sobre Nosotros</li>
-          <li>Gestión de Proyectos</li>
-          <li>Opiniones</li>
-          <li>Perfil</li>
+      <nav className={`navbar ${menuOpen ? "navbar-open" : ""}`}>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/">Sobre Nosotros</Link>
+          </li>
+          <li>
+            <Link to="/">Gestión de Proyectos</Link>
+          </li>
+          <li>
+            <Link to="/">Opiniones</Link>
+          </li>
+          <li>
+            <Link to="/">Perfil</Link>
+          </li>
         </ul>
       </nav>
-
 
 
       <div className="user-section">
@@ -49,12 +52,14 @@ const header = ({ log, hola }) => {
           <i className="fa-solid fa-user"></i>
           {log && `${log} Sesión`}
         </Link>
+
+        {/* Botón de menú para dispositivos móviles */}
         <div className="menu-icon" onClick={handleMenuClick}>
-          <i className="fa-solid fa-bars"></i>
+          <i className={`fa-solid ${menuOpen ? "fa-times" : "fa-bars"}`}></i>
         </div>
       </div>
     </header>
   );
 };
 
-export default header;
+export default Header;
