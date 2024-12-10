@@ -4,8 +4,8 @@ import './styles/estilos.css';
 
 const App: React.FC = () => {
   const [isLogged, setIsLogged] = useState(false);
-  const username = 'Usuario'; 
-  const greeting = '¡Bienvenido!'; 
+  const username = 'Usuario';
+  const greeting = '¡Bienvenido!';
 
   const registroProyecto = () => {
     window.location.href = '/registrar_pro';
@@ -13,7 +13,7 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <header>
+       <header>
         <a href="/" className="logo">
           <img src="\src\assets\sirs.jpg" alt="Logo" width="60" />
         </a>
