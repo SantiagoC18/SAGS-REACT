@@ -8,6 +8,8 @@ import '/src/styles/inicio2.css';
 
 const Nav = ({ log, hola }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const username = 'Usuario';
+  const greeting = '¡Bienvenido!';
 
   useEffect(() => {
     if (hola) {

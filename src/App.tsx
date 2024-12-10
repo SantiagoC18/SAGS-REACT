@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './styles/inicio2.css';
 import './styles/estilos.css';
+import './pages/modulos';
+import Modulos from './pages/modulos';
+
 
 const App: React.FC = () => {
   const [isLogged, setIsLogged] = useState(false);
@@ -22,7 +25,7 @@ const App: React.FC = () => {
             <a href="/" className="active">Home</a>
           </li>
           <li><a href="/src/pages/sobre_nosotros">Sobre Nosotros</a></li>
-          <li><a href="/src/pages/modulos">Gestión de Proyectos</a></li>
+          <li><a href= "/src/pages/modulos">Gestion de Proyectos</a></li>
           <li><a href="/src/pages/opiniones">Opiniones</a></li>
           <li><a href="/src/pages/perfil">Perfil</a></li>
         </ul>
