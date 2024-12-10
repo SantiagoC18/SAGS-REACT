@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '/styles/registro';
+import '/src/styles/registro';
 
 const Registro = () => {
     const [isSignUp, setIsSignUp] = useState(true);
