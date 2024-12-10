@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/src/assets/img/sirs.jpg">
+    <script src="https://kit.fontawesome.com/25eed41d7b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/src/styles/perfil.css">
+    <link rel="stylesheet" href="/src/styles/estilos.css">
+
+    <title>Perfil</title>
+
+</head>
+
+<body>
+
+    <header>
+        <a href="{{ url_for('index') }}" class="logo"><img src="/src/assets/img/sirs.jpg" width="60px"></a>
+    
+        <ul class="navbar">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('sobre_nosotros') }}">Sobre Nosotros</a></li>
+            <li><a href="{{ url_for('modulos') }}">Gestion de Proyectos</a></li>
+            <li><a href="{{ url_for('opiniones') }}">Opiniones</a></li>
+            <li><a href="{{ url_for('perfil') }}" class="active">Perfil</a></li>
+        </ul>
+    
+        <div class="main">
+            <a href="{{ url_for('logout') }}" class="user"><i class="fa-solid fa-user"></i>{% if log %} {{log}} Sesion {%
+                endif %}</a>
+            <div class="bx bx-menu" id="menu-icon"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </header>
+
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.3.8/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/oP1Rx8Le7K9noHAa/scene.splinecode"></spline-viewer>
+
+    {% if hola %}
+    <script>
+        swal.fire({
+            title: "ACCESO CONCEDIDO",
+            text: "Hola {{hola}} bienvenido a (SIRS)",
+            icon: "success",
+            buttons: false,
+            timer: 2000,
+            showConfirmButton: false,
+            background: "#171717",
+            toast: true,
+            position: "top"
+        });
+    </script>
+    {% endif %}
+
+
+
+
+    <main>
+
+        <section class="user-info">
+            <h2>Información del Usuario</h2>
+            <div class="user-details">
+                {% for dato in usuario %}
+                <img src="/static/img/usuarios/{{dato['foto']}}" alt="">
+                <div class="user-text">
+
+                    <p><strong>Nombre:</strong> {{ dato['nombres'] }} {{ dato['apellidos'] }}</p>
+                    <p><strong>Correo Electrónico:</strong> {{ dato['email'] }}</p>
+                    <p><strong>Funcion:</strong> {{ dato['perfil'] }}</p>
+                    <button id="btn-abrir-popup0" class="button">Editar Datos</button>
+
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="user-projects">
+            <a href="{{ url_for('registrar_pro') }}">
+                <button title="Agregar proyecto" class="button_add">
+                    <i class="fa-regular fa-square-plus fa-2xl" style="color: #ffffff;"></i>
+                </button>
+            </a>
+
+            <h2>Proyectos del Usuario</h2>
+            {% for dato in datos %}
+            <div class="project">
+                <h3>Proyecto {{ dato['nombre'] }}</h3>
+                <p>Descripción:{{dato['descripcion']}}</p>
+                <p>Estado: En progreso</p>
+                <a href="{{ url_for('checkdown', idproy = dato['idproy']) }}">
+                    <button class="button_view" style="margin-bottom: 10px;">Ver</button>
+                </a>
+            </div>
+            {% endfor %}
+            <!-- Agrega más proyectos según sea necesario -->
+        </section>
+
+    </main>
+
+
+
+
+
+    <!--ventana emergente1-->
+
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup" style="height: 65%; background-color: #0000007e;">
+            <a href="#" id="btn-cerrar-popup0" class="btn-cerrar-popup" style="margin-right: -100%"><i
+                    class="fas fa-times"></i>
+            </a>
+            <h3 style="color: white;">Actualizar Perfil</h3>
+            <form action="">
+
+                <div class="input-container">
+                    <label for="name" class="name">No° Documento (id)</label>
+                    <input type="number" class="input" placeholder="Documento" name="documento" required="">
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-container">
+                    <label for="name" class="name">Clave</label>
+                    <input type="password" class="input" placeholder="Clave" name="clave" required="">
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-container">
+                    <label for="name" class="name">Correo</label>
+                    <input type="email" class="input" placeholder="Email@" name="correo" required="">
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-container">
+                    <label for="name" class="name">Telefono</label>
+                    <input type="number" class="input" placeholder="Telefono" name="telefono" required="">
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-container">
+                    <label for="name" class="name">Ubicacion</label>
+                    <input type="input" class="input" placeholder="Ubicacion" name="Ubicacion" required="">
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-container">
+                    <label for="name" class="name">Perfil</label>
+                    <input type="text" class="input" placeholder="Perfil" name="perfil" required="">
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-container">
+                    <label for="name" class="name">Nombres</label>
+                    <input type="text" class="input" placeholder="Nombres" name="nombres" required="">
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-container">
+                    <label for="name" class="name">Apellidos</label>
+                    <input type="text" class="input" placeholder="Apellidos" name="apellidos" required="">
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-container">
+                    <label for="name" class="name">Foto</label>
+                    <input type="file" class="input" placeholder="Foto" name="foto" required="">
+                    <div class="underline"></div>
+                </div>
+
+                <button class="button">Actualizar</button>
+
+            </form>
+
+
+
+        </div>
+    </div>
+    </div>
+
+    <!--fin ventana emergente1-->
+
+
+
+
+    <script src="/static/js/popup.js"></script>
+    
+    <script src="/static/js/bar.js"></script>
+</body>
+
+</html>
