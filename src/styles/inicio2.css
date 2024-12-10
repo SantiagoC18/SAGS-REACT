@@ -1,18 +1,15 @@
 /*COVER*/
-
-
 .container__cover {
     width: 100%;
     height: 800px;
     background-image: url(../i);
     background-position: right;
     background-repeat: no-repeat;
-    margin-top: 45px;
 }
 
 .cover {
     max-width: 1200px;
-    height: 100%;
+    height: 90%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -218,6 +215,10 @@
     color: #0792eb;
     scale: 1.1;
     box-shadow: 0 0px 20px #0792eb;
+}
+
+button{
+    cursor: pointer;
 }
 
 .button:active {

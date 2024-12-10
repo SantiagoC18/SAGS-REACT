@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import swal from "sweetalert2";
 import React, { useState, useEffect } from "react";
+import '/src/styles/estilos.css';
+import '/src/styles/inicio2.css';
 
-const Header = ({ log, hola }) => {
+
+
+const Nav = ({ log, hola }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -54,12 +58,13 @@ const Header = ({ log, hola }) => {
         </Link>
 
         {/* Botón de menú para dispositivos móviles */}
-        <div className="menu-icon" onClick={handleMenuClick}>
+        <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
           <i className={`fa-solid ${menuOpen ? "fa-times" : "fa-bars"}`}></i>
         </div>
+
       </div>
     </header>
   );
 };
 
-export default Header;
+export default Nav;
