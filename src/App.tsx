@@ -3,10 +3,9 @@ import './styles/inicio2.css';
 import './styles/estilos.css';
 
 const App: React.FC = () => {
-  // Simulación de datos de sesión y variables dinámicas
-  const [isLogged, setIsLogged] = useState(false); // Simulación de estado de login
-  const username = 'Usuario'; // Simulación de nombre de usuario
-  const greeting = '¡Bienvenido!'; // Simulación de saludo
+  const [isLogged, setIsLogged] = useState(false);
+  const username = 'Usuario'; 
+  const greeting = '¡Bienvenido!'; 
 
   const registroProyecto = () => {
     window.location.href = '/registrar_pro';
