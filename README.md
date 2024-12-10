@@ -36,11 +36,12 @@ SAGS es una herramienta diseñada para optimizar las etapas de planificación y 
 - **API REST:** Garantiza una comunicación eficiente entre el frontend y el backend.  
 - **Escalabilidad:** Diseñado para crecer y adaptarse a las necesidades futuras del proyecto.  
 ---
-## Instalación  
+## Instalación 
 ### Requisitos previos  
 1. Tener instalado Node.js y npm.  
 2. Tener instalado Python y pip.  
 3. Tener MySQL configurado en tu máquina.  
+
 ### Instrucciones  
 **1. Clona este repositorio en tu máquina local.**  
 ```bash  
@@ -72,7 +73,7 @@ npm run dev
     flask run  
 ```
 
-**6. Levanta el servidor frontend.*
+**6. Levanta el servidor frontend.**
 ```bash
     npm run dev
 ```
