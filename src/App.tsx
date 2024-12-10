@@ -15,16 +15,16 @@ const App: React.FC = () => {
     <div>
        <header>
         <a href="/" className="logo">
-          <img src="\src\assets\sirs.jpg" alt="Logo" width="60" />
+          <img src="/src/assets/img/sirs.jpg" alt="Logo" width="60" />
         </a>
         <ul className="navbar">
           <li>
             <a href="/" className="active">Home</a>
           </li>
-          <li><a href="\src\pages\sobre_nosotros">Sobre Nosotros</a></li>
-          <li><a href="/pages/modulos">Gestión de Proyectos</a></li>
-          <li><a href="/opiniones">Opiniones</a></li>
-          <li><a href="/perfil">Perfil</a></li>
+          <li><a href="/src/pages/sobre_nosotros">Sobre Nosotros</a></li>
+          <li><a href="/src/pages/modulos">Gestión de Proyectos</a></li>
+          <li><a href="/src/pages/opiniones">Opiniones</a></li>
+          <li><a href="/src/pages/perfil">Perfil</a></li>
         </ul>
         <div className="main">
           <a href="/logout" className="user">
@@ -52,7 +52,7 @@ const App: React.FC = () => {
               </button>
             </div>
             <div className="svg">
-              <img src="\src\assets\loggg.png" alt="Logo SVG" />
+              <img src="/src/assets/img/loggg.png" alt="Logo SVG" />
             </div>
           </div>
         </div>
