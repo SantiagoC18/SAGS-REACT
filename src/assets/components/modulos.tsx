@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import '/src/styles/modulos.css';
 
 
 const Modulos = () => {
@@ -12,7 +13,6 @@ const Modulos = () => {
       title: "ERROR",
       text: message,
       icon: "error",
-      buttons: false,
       timer: 2000,
       showConfirmButton: false,
       background: "#fff",

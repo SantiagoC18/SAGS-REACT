@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import '/src/styles/inicio2.css';
 
 const Planes: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState<string>("");

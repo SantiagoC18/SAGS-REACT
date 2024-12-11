@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Nav from './Nav';
+import '/src/styles/inicio2.css';
 
 const Home = () => {
   const [componenteActivo, setComponenteActivo] = useState<string>("modulos");
@@ -22,7 +22,6 @@ const Home = () => {
 
   return (
     <div>
-      <Nav isLogged={isLogged} username={username} handleNavClick={handleNavClick} />
       <main className="container_main">
         <div className="container__cover">
           <div className="cover">

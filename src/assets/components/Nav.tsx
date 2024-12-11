@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import '/src/styles/inicio2.css';
+
 
 interface HeaderProps {
   isLogged: boolean;
@@ -13,12 +16,12 @@ const Nav: React.FC<HeaderProps> = ({ isLogged, username, handleNavClick }) => {
         <img src="/src/assets/img/sirs.jpg" alt="Logo" width="60" />
       </a>
       <ul className="navbar">
-        <li><a href="/" className="active">Home</a></li>
-        <li><a href="/src/pages/sobre_nosotros">Sobre Nosotros</a></li>
-        <li onClick={() => handleNavClick("Modulos")}>Gestion de Proyectos</li>
-        <li><a href="/src/pages/opiniones">Opiniones</a></li>
-        <li><a href="/src/pages/perfil">Perfil</a></li>
-      </ul>
+      <li><Link to="/home">Home</Link></li>
+      <li><Link to="/sobre_nosotros">Sobre Nosotros</Link></li>
+      <li><Link to="/gestion-de-proyectos">Gestión de Proyectos</Link></li>
+      <li><Link to="/opiniones">Opiniones</Link></li>
+      <li><Link to="/perfil">Perfil</Link></li>
+    </ul>
       <div className="main">
         <a href="/logout" className="user">
           <i className="fa-solid fa-user"></i>
