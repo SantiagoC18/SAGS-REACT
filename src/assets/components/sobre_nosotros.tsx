@@ -1,6 +1,5 @@
 import React from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "/src/styles/sobre_nosotros.css";
 import Nav from "./Nav";
 
 const SobreNosotros: React.FC = () => {
@@ -72,7 +71,6 @@ const SobreNosotros: React.FC = () => {
     <div className="container">
       <Nav/>
       <h1>Sobre Nosotros</h1>
-
       <div className="team-members">
         {teamMembers.map((member, index) => (
           <div className="member" key={index}>

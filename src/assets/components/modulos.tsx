@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import '/src/styles/modulos.css';
 
 
 const Modulos = () => {

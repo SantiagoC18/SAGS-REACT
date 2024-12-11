@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
-import '/src/styles/perfil.css';
 
 const Perfil: React.FC = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
