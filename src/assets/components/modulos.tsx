@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import '/src/styles/modulos.css';
 
 
 const Modulos = () => {
@@ -21,40 +22,8 @@ const Modulos = () => {
   }
 
   return (
-    <div>
-      <header>
-        <a href="/" className="logo">
-          <img src="/src/assets/img/sirs.jpg" width="60px" alt="Logo" />
-        </a>
-
-        <ul className="navbar">
-          <li><a href="/">Home</a></li>
-          <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
-          <li><a href="/modulos" className="active">Gestion de Proyectos</a></li>
-          <li><a href="/opiniones">Opiniones</a></li>
-          <li><a href="/perfil">Perfil</a></li>
-        </ul>
-
-        <div className="main">
-          <a href="/logout" className="user">
-            <i className="fa-solid fa-user"></i>
-            {log ? `${log} Sesion` : ""}
-          </a>
-          <div className="bx bx-menu" id="menu-icon">
-            <i className="fa-solid fa-bars"></i>
-          </div>
-        </div>
-      </header>
-
-      <script
-        type="module"
-        src="https://unpkg.com/@splinetool/viewer@1.3.8/build/spline-viewer.js"
-      ></script>
-      <spline-viewer
-        url="https://prod.spline.design/oP1Rx8Le7K9noHAa/scene.splinecode"
-      ></spline-viewer>
-
-      <section className="container-cards">
+    <div className="container-mod">
+      <section className="container-cards-proy">
         <script src="https://cdn.tailwindcss.com"></script>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto py-10 px-4">

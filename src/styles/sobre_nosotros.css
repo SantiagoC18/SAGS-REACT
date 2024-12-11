@@ -1,8 +1,10 @@
-.container {
+.container-nosotros {
     max-width: 1200px;
+    min-height: 90%;
     margin: 0 auto;
     padding: 20px;
-    margin-top: 90px;
+    display: grid;
+    place-content: center;
 }
 
 h2 {
@@ -84,7 +86,7 @@ h1 {
 }
 .member {
     text-align: center;
-    margin: 1rem;
+    margin: 3rem;
 }
 .member img {
     width: 200px;

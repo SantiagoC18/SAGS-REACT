@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "/src/styles/foro.css";
 import Swal from "sweetalert2";
+import '/src/styles/foro.css';
 
 const Foro: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -29,34 +30,7 @@ const Foro: React.FC = () => {
   };
 
   return (
-    <div>
-      <header>
-        <a href="/" className="logo">
-          <img src="/src/assets/img/sirs.jpg" alt="SIRS Logo" width="60px" />
-        </a>
-
-        <ul className="navbar">
-          <li><a href="/">Home</a></li>
-          <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
-          <li><a href="/modulos">Gestión de Proyectos</a></li>
-          <li><a href="/opiniones" className="active">Opiniones</a></li>
-          <li><a href="/perfil">Perfil</a></li>
-        </ul>
-
-        <div className="main">
-          <a href="/logout" className="user">
-            <i className="fa-solid fa-user"></i> Sesión
-          </a>
-          <div className="bx bx-menu" id="menu-icon">
-            <i className="fa-solid fa-bars"></i>
-          </div>
-        </div>
-      </header>
-
-      <spline-viewer
-        url="https://prod.spline.design/oP1Rx8Le7K9noHAa/scene.splinecode"
-      ></spline-viewer>
-
+    <div className="container-foro">
       <div id="opinions-list">
         <h2>Opiniones de Usuarios</h2>
         <p>Comparte tu experiencia con nuestra comunidad</p>

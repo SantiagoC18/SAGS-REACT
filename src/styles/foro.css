@@ -1,3 +1,8 @@
+.container-foro{
+    margin-top: 10%;
+}
+
+
 /* Estilos del modal */
 .modal {
     display: none;
@@ -94,7 +99,6 @@ button[type="submit"]:hover {
     background-color: black;
     color: #fff;
     margin: auto;
-    margin-top: 90px;
     width: 75%;
     padding: 10px;
     border: 2px solid #ddd;
@@ -147,26 +151,26 @@ button[type="submit"]:hover {
 
 .rating {
     display: inline-block;
-  }
-  
-  .rating input {
-    display: none;
-  }
-  
-  .rating label {
-    float: right;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  
-  .rating label:before {
-    content: "\2605";
-    font-size: 30px;
-  }
-  
-  .rating input:checked ~ label,
-  .rating label,
-  .rating label ~ label {
-    color: #ffd700;
-    transition: color 0.3s;
-  }
+    }
+    
+    .rating input {
+        display: none;
+    }
+    
+    .rating label {
+        float: right;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+    
+    .rating label:before {
+        content: "\2605";
+        font-size: 30px;
+    }
+    
+    .rating input:checked ~ label,
+    .rating label,
+    .rating label ~ label {
+        color: #ffd700;
+        transition: color 0.3s;
+    }

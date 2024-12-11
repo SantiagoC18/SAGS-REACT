@@ -1,9 +1,9 @@
-body{
+.container-mod{
+    margin-top: 10%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
-
-.container-cards {
+.container-cards-proy {
     width: 100%;
     height: auto;
     display: flex;
@@ -18,7 +18,7 @@ body{
         align-items: center;
     }
 
-    .container-cards{
+    .container-cards-proy{
         flex-direction: column;
     }
 

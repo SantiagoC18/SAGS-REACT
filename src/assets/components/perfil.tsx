@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
+import '/src/styles/perfil.css';
 
 const Perfil: React.FC = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -18,9 +19,7 @@ const Perfil: React.FC = () => {
   };
 
   return (
-    <div>
-      <Nav/>
-       
+    <div className="container-perfil">
       <main>
         <section className="user-info">
           <h2>Información del Usuario</h2>

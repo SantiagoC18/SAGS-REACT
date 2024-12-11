@@ -1,11 +1,12 @@
-main {
+.container-perfil {
     max-width: 800px;
-    margin: 20px auto;
-    padding: 90px 20px;
+    margin: 0 auto;
+    padding: 50px 20px;
 }
 
 .user-info,
 .user-projects {
+    margin-top: 8%;
     background-color: #020614;
     padding: 20px;
     margin-bottom: 20px;

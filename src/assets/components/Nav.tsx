@@ -16,7 +16,7 @@ const Nav: React.FC<HeaderProps> = ({ isLogged, username, handleNavClick }) => {
         <img src="/src/assets/img/sirs.jpg" alt="Logo" width="60" />
       </a>
       <ul className="navbar">
-      <li><Link to="/home">Home</Link></li>
+      <li><Link to="/">Home</Link></li>
       <li><Link to="/sobre_nosotros">Sobre Nosotros</Link></li>
       <li><Link to="/gestion-de-proyectos">Gestión de Proyectos</Link></li>
       <li><Link to="/opiniones">Opiniones</Link></li>
